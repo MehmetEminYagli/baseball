@@ -8,16 +8,16 @@ public class Top : MonoBehaviour
     public Text skor;
     private int sayac = 0;
     public GameObject Pota;
-
+    public Button TryAgain;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        sayac++;
-        skor.text = sayac.ToString();
        
             if (collision.gameObject.name == "Sayi") // 1. nesneyle çarpýþýldý mý kontrol ediyoruz
             {
-                // 2. nesnenin rastgele bir konuma yerleþtirileceði sýnýrlarý belirleyin
-                float minX = -2f;
+            sayac++;
+            skor.text = sayac.ToString();
+            // 2. nesnenin rastgele bir konuma yerleþtirileceði sýnýrlarý belirleyin
+            float minX = -2f;
                 float maxX = 2f;
                 float minY = -1.75f;
                 float maxY = 2.5f;
@@ -29,9 +29,23 @@ public class Top : MonoBehaviour
 
                 // 2. nesnenin pozisyonunu güncelleyin
                 Pota.transform.position = newPos;
-
-
             }
-        
+
+            if (collision.gameObject.name == "GameOver")
+            {
+
+            TryAgain.gameObject.SetActive(true);
+            Time.timeScale = 0;
+            }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Ses efekti çal
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
+    }
+
+
+
 }
