@@ -6,20 +6,11 @@ public class Platform : MonoBehaviour
 {
     public float speed;
     public float maxheight;
-
     private Vector3 targetPosition; //hedef pozisyonu bulmak için
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-
         Hareket();
-
-
     }
 
     public void Hareket()
