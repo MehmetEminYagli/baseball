@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 650443333}
   m_Layer: 0
   m_Name: pota
-  m_TagString: Untagged
+  m_TagString: Pota
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -655,7 +655,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650443332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.25, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -853,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9767e7dab9a2ec41b1012c3ca41272d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skor: {fileID: 0}
+  Pota: {fileID: 650443332}
 --- !u!1 &1011136704
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,10 +948,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1095024035}
   - component: {fileID: 1095024036}
-  - component: {fileID: 1095024037}
   m_Layer: 0
   m_Name: Sayi
-  m_TagString: Untagged
+  m_TagString: Sayi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -987,19 +986,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.03
---- !u!114 &1095024037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095024034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9767e7dab9a2ec41b1012c3ca41272d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skor: {fileID: 390647429}
 --- !u!1 &1116441526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,7 +1488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c15e628a23abe149817c10f4ba6b794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 15
   maxheight: -1.5
 --- !u!1 &1871305965
 GameObject:
@@ -1574,9 +1560,10 @@ GameObject:
   - component: {fileID: 1897119107}
   - component: {fileID: 1897119106}
   - component: {fileID: 1897119109}
+  - component: {fileID: 1897119110}
   m_Layer: 0
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: Top
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1685,6 +1672,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1897119110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897119105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5321f268567418b499ae2c28f6ab7a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skor: {fileID: 390647429}
+  Pota: {fileID: 650443332}
 --- !u!1 &1938773793
 GameObject:
   m_ObjectHideFlags: 0
